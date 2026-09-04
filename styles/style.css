@@ -1,30 +1,208 @@
 * {
-  box-sizing: border-box; /* uitleg over wat dit is */
+  box-sizing: border-box; 
+  /* background: #f4f1ea; */
+  /* uitleg over wat dit is */
 }
 
 /* HTML */
 /* Hier wordt met een 'type selector' een element in de html geselecteerd. */
 /* Dit verwijst naar het <html> element. De <html> krijgt een lichtgele achtergrond. */
 
-html {
-  background:lightyellow;
-}
+
 
 /* BODY */
 /* Hier wordt met een 'type selector' het <body> element geselecteerd. */
 /* In de <body> wordt de inhoud met "display: flex" in het midden geplaats. */
 /* En krijgt de <body> en alle inhoud een font en kleur. */
 body {
+  margin: 0;
+  min-height: 100vh;
+
+  padding: 50px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #190027; /* de tekst kleur wordt in hex kleuren bepaald. */
+  
+  background:linear-gradient(
+  135deg,
+  #a97cff,
+  #79a7ff,
+  #65e4ea
+);
+}
+  .kaart{
+    position: relative;
+    width: 750px;
+    max-width: 100%;
+
+    padding: 50px;
+
+    background: white;
+
+    border-radius: 40px;
+
+    box-shadow: 0 20px 50p rgb(0 0 0 / .18);
+  }
+
+.profiel {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   text-align: center;
+}
+
+.profielfoto{
+  width: 200px;
+  height: 200px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 6px solid #dec4fc;
+
+  outline: 3px solid #dcacff;
+
+  box-shadow: 0 8px 20px rgb(0 0 0 / .15);
+
+  margin-bottom: 20px;
+}
+.profiel h1 {
+  margin: 25px 0 5px;
+
+  font-size: 3rem;
+
+  color: #1c0038;
+}
+
+.ondertitel{
+ margin: 0 0 40px;
+
+ font-size: 1.2rem;
+
+ color: #333;
+}
+
+.onderdelen {
+ display: flex;
+ flex-direction: column;
+
+ gap: 20px;
+}
+
+.blok{
+  padding: 25px;
+
+  border-radius: 25px;
+}
+
+.over-mij{ 
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  background: #cbc6fcca;
+
+  padding: 25px;
+
+  border-radius: 25px;
+}
+
+.blok-inhoud{
+  flex: 1;
+}
+
+.blok h2{ 
+  margin: 0 0 15px;
+
+  font-size: 1.4rem;
+
+  color: #150020;
+
+  text-transform: uppercase;
+}
+
+.blok p{
+  margin: 0;
+
+  line-height: 1.5;
+}
+.onderste-blokken{
+  display: flex;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+.leuk-vind,
+.skills { 
+  width: 80%;
+}
+
+.leuk-vind{
+  background: #edf4ff;
+}
+
+.skills{
+  background: #eafafa;
+}
+
+.icoon{
+  width: 55px;
+  height: 55px;
+  min-width: 55px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  height: 100vh;
-  
-  font-family: open sans;
-  color: #10214e; /* de tekst kleur wordt in hex kleuren bepaald. */
+
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  background: #f8f5b3;
+
+  font-size: 25px;
 }
 
+.passie{ 
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.passie li{
+  margin-bottom: 12px;
+
+  font-size: 1rem;
+}
+
+.vaardigheden{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.vaardigheden li{
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin-bottom: 15px;
+}
 /* ARTICLE */
 /* Het <article> element krijgt hier de styling. */
 /* De inhoud wordt met "display: flex" gepositioneerd en uitgelijnd. */
@@ -32,20 +210,42 @@ body {
 /* Het <article> element krijgt een kleur, en nog meer ... */
 article {
   position: relative;
+  overflow: hidden;
+
+  background-color: rgba(204, 251, 255, 0.694);
+padding: 20px;
+margin:20px;
   
+  box-shadow: 0 0 20px 20px rgb(0 0 0 / .1);
+  border-radius: 1rem;
+
+  transition: .25s;
+}
+article::before {
+  /* content: ; */
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 150px;
+
+  background: #ccec92;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
   
-  width: 50vw;
-  max-width: 25em;
-  min-width: 20em;
   
-  border-radius: 1rem;
-  background: rgb(0 239 255);
-  background: linear-gradient(0deg, rgb(0 239 255) 40%, #4e54c8 100%);
-  box-shadow: 0 0 20px 20px rgb(0 0 0 / .1);
+  max-width: 90%;
+  min-width: 70%;
+  
+  padding: 40px;
+  border-radius: 30px;
+  background: -moz-only-whitespace;
+  background: linear-gradient(0deg, rgb(214, 183, 255) 40%, #e6bff5 100%);
+  box-shadow: 0 0 20px 20px rgb(0 0 0 / .12);
   
   transition: .25s;
 }
@@ -57,6 +257,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: end;
+  /* background:pink; */
 }
 
 /* H1 */
@@ -64,7 +265,7 @@ header {
 h1 {
   margin: 2rem 0 1rem 0; /* Margin is de ruimte om het element heen. Boven beginnen, met de klok mee */
   
-  color: rgb(0 239 255); /* De tekst kleur wordt in rgb() bepaald. */
+  color: rgb(37, 1, 56); /* De tekst kleur wordt in rgb() bepaald. */
 }
 
 /* P */
@@ -78,7 +279,7 @@ p.slogan {
 /* BUTTON */
 /* Hier krijgt de <button> de styling. */
 button {
-  position: absolute;
+  position:absolute;
   right: 1rem;
   top: 1rem;
   
@@ -86,9 +287,9 @@ button {
   height: 2.5rem;
   padding: .25rem;
   
-  border: none;
-  border-radius: 50%; /* De border-radius geeft de <button> ronde hoekjes. */
-  background: rgb(0 239 255);
+  border: rgb(195, 142, 245);
+  border-radius: 70%; /* De border-radius geeft de <button> ronde hoekjes. */
+  background: rgb(221, 167, 255);
   
   scale:.8;
   
@@ -99,12 +300,12 @@ button {
 /* :hover is een 'Pseudo-class selector', daarmee worden interacties op het element gestyled. */
 button:hover {
   cursor: pointer;
-  background: darkgoldenrod;
+  background: rgb(248, 129, 240);
 }
 /* Met de 'Pseudo-class selector' :focus kan je bepalen hoe het element er uit moet zien als de tab toets op het toetsenbord wordt gebruikt. */
 button:focus {
   outline: none;
-  background: darkgoldenrod;
+  background: rgb(234, 154, 248);
 }
 
 /* In het <button> element staat een <svg> voor het icoon. */
@@ -114,7 +315,7 @@ button svg {
   top: calc(1.25rem - 12px);
   left: calc(1.25rem - 12px);
   
-  stroke: #4e54c8;
+  stroke: #ffa0fa;
   
   transition: .25s;
   transition-delay: .25s; /* Een transitie op het <svg> element begin 0.25 seconde later. */
@@ -140,10 +341,10 @@ img {
   width: 10em;
   height: auto;
   
-  border: 5px solid #fff;
-  border-radius: 10em;
-  box-shadow: 0 0 2px 2px rgb(0 0 0 /.2);
-  
+  border: 8px rgb(rgb(6, 1, 1));
+  border-radius: 70%;
+  box-shadow: 0 10px 25px rgb(0 0 0 / .15);
+  outline: 3px solid #cd88ff;
   transition: 1s .15s; /* Transition Shorthand notation: Transities op het img element duren 1 seconde en beginnen 0.15 seconde later */
 }
 
@@ -248,4 +449,23 @@ body.is-expanded dl dd {
 
 body.is-expanded img {
   width: 15em;
+}
+
+@media (max-width: 650px) {
+
+  .kaart{
+    padding: 30px 20px;
+  }
+
+  .onderste-blokken{
+    flex-direction: column;
+  }
+
+  .leuk-vind,
+  .skills{
+    width: 100%;
+  }
+  .profiel h1{
+    font-size: 2.3rem;
+  }
 }

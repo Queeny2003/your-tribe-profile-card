@@ -6,54 +6,126 @@
     <title>FDND Visitekaartje</title>
     <link rel="stylesheet" href="styles/style.css">
   </head>
+
   <body>
     
-    <article>
-      
-      <header>
-        
-        <h1>Queeny Naomi Eleonora</h1>
-        
-        <p class="slogan"><em>Creatieve studet van alle markten thuis</em></p>
-        
-        <button>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <title>Wijzig layout</title>
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-        </button>
-        
-      </header>
-  
-      <img src="" alt="" width="800" height="800">
+    <article class="kaart">
+      <button class="formaat-knop" aria-label="Verander formaat">
 
-      <dl>
-        <dt>HTML</dt><header>Wat ik leuk vind</header></headwe>
-        <dd>🏆🏆🏆</dd>
-        
-        <dt>CSS</dt>
-        <dd>🏆🏆</dd>
-        
-        <dt>JavaScript</dt>
-        <dd>🏆🏆🏆🏆</dd>
-      </dl>
-  
-      <p>Het WEB is te gek! <br> Met HTML, CSS en JS kan ik vette, interactieve web apps maken.</p>
-      
-    </article>
+  <svg width="24" height="24" viewBox="0 0 24 24"
+    stroke-width="1.5"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round">
 
-    <script src="scripts/script.js"></script>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
+    <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
+    <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
+    <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
+
+  </svg>
+
+  <svg width="24" height="24" viewBox="0 0 24 24"
+    stroke-width="1.5"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
+    <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
+    <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
+    <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
+
+  </svg>
+
+</button>
+      <header class="profiel">
+        
+        <img 
+          src="assets/Queeny.jpeg"
+          alt="foto van queeny"
+          class="profielfoto"
+        >
+
+       <h1>Queeny Eleonora</h1>
+
+        
+      <p class="ondertitel">Creatieve student & bakliefhebber 💕</p>
     
-  </body>
+    </header>
+    
+    <section class="onderdelen">
+
+     <div class="blok over-mij">
+
+       <div class="icoon">💁🏽‍♀️</div> 
+
+      <div>
+        <h2>Over mij</h2>
+
+        <p>
+          Ik ben Queeny, een creatieve en leergierige student. 
+          Ik vind het leuk om nieuwe dingen te leren, 
+          creatief bezig te zijn en mezelf te ontwikkelen.
+      </p>
+
+    </div> 
+
+  </div>
+
+  <div class="onderste-blokken">
+
+   <div class="blok leuk-vind">
+
+     <div class="icoon">🩷</div>
+
+     <h2>Wat ik leuk vind</h2>
+
+     <ul class="passie">
+      <li>🚗Auto's</li>
+      <li>🐕Honden</li>
+      <li>🍓By Queen (eigen bedrijf)</li>
+      <li>🍰Bakken</li>
+    </ul>
+
+</div>
+
+<div class="blok skills">
+
+  <div class="icoon">⭐️</div>
+
+  <h2>Mijn skills</h2>
+
+  <ul class="vaardigheden">
+
+    <li>
+      <span>Creatief</span>
+      <span>⭐️⭐️⭐️⭐️⭐️</span>
+    </li>
+
+    <li>
+     <span>Zelfstandig</span>
+     <span>⭐️⭐️⭐️⭐️</span>
+    </li> 
+          
+    <li>
+     <span>Perfectionistisch</span>
+     <span>⭐️⭐️⭐️⭐️⭐️</span>
+    </li>  
+
+  </ul>
+
+</div> 
+
+</div>  
+
+   </section>
+
+</article>
+
+<script src="scripts/script.js"></script>
+    
+</body>
 </html>
